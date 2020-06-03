@@ -12,7 +12,7 @@
 <a id='intro'></a>
 ### Introduction
 
-A/B tests are very commonly performed by data analysts and data scientists.  It is important that you get some practice working with the difficulties of these 
+A/B tests are very commonly performed by data analysts and data scientists.  It is important that to get some practice working with the difficulties of these 
 
 For this project, I will be working to understand the results of an A/B test run by an e-commerce website.  My goal is to work through this notebook to help the company understand if they should implement the new page, keep the old page, or perhaps run the experiment longer to make their decision.
 
@@ -32,7 +32,8 @@ import matplotlib.pyplot as plt
 random.seed(42)
 ```
 
-`1.` Now, read in the `ab_data.csv` data. Store it in `df`.  **Use your dataframe to answer the questions in Quiz 1 of the classroom.**
+### Step 1
+Now, read in the `ab_data.csv` data. Store it in `df`.  **Use your dataframe to answer the questions in Quiz 1 of the classroom.**
 
 a. Read in the dataset and take a look at the top few rows here:
 
@@ -188,7 +189,8 @@ df.info()
     memory usage: 11.2+ MB
 
 
-`2.` For the rows where **treatment** does not match with **new_page** or **control** does not match with **old_page**, we cannot be sure if this row truly received the new or old page.  Use **Quiz 2** in the classroom to figure out how we should handle these rows.  
+### Step 2
+For the rows where **treatment** does not match with **new_page** or **control** does not match with **old_page**, we cannot be sure if this row truly received the new or old page.  Use **Quiz 2** in the classroom to figure out how we should handle these rows.  
 
 a. Now use the answer to the quiz to create a new dataset that meets the specifications from the quiz.  Store your new dataframe in **df2**.
 
@@ -297,7 +299,8 @@ df2.head()
 
 
 
-`3.` Use **df2** and the cells below to answer questions for **Quiz3** in the classroom.
+### Step 3
+Use **df2** and the cells below to answer questions for **Quiz3** in the classroom.
 
 a. How many unique **user_id**s are in **df2**?
 
@@ -440,7 +443,8 @@ df2[df2.user_id == 773192]
 
 
 
-`4.` Use **df2** in the cells below to answer the quiz questions related to **Quiz 4** in the classroom.
+### Step 4
+Use **df2** in the cells below to answer the quiz questions related to **Quiz 4** in the classroom.
 
 a. What is the probability of an individual converting regardless of the page they receive?
 
@@ -514,7 +518,8 @@ However, then the hard question is do you stop as soon as one page is considered
 These questions are the difficult parts associated with A/B tests in general.  
 
 
-`1.` For now, consider you need to make the decision just based on all the data provided.  If you want to assume that the old page is better unless the new page proves to be definitely better at a Type I error rate of 5%, what should your null and alternative hypotheses be?  You can state your hypothesis in terms of words or in terms of **$p_{old}$** and **$p_{new}$**, which are the converted rates for the old and new pages.
+### Step 1
+For now, consider you need to make the decision just based on all the data provided.  If you want to assume that the old page is better unless the new page proves to be definitely better at a Type I error rate of 5%, what should your null and alternative hypotheses be?  You can state your hypothesis in terms of words or in terms of **$p_{old}$** and **$p_{new}$**, which are the converted rates for the old and new pages.
 
 **$H_{0}$**  :  **$p_{old}$** $\ge$ **$p_{new}$**
 
@@ -524,7 +529,8 @@ These questions are the difficult parts associated with A/B tests in general.
 
 **$H_{1}$** (Alternatve Hypothesis) : New page has better conversion rate than old page.
 
-`2.` Assume under the null hypothesis, $p_{new}$ and $p_{old}$ both have "true" success rates equal to the **converted** success rate regardless of page - that is $p_{new}$ and $p_{old}$ are equal. Furthermore, assume they are equal to the **converted** rate in **ab_data.csv** regardless of the page. <br><br>
+### Step 2
+Assume under the null hypothesis, $p_{new}$ and $p_{old}$ both have "true" success rates equal to the **converted** success rate regardless of page - that is $p_{new}$ and $p_{old}$ are equal. Furthermore, assume they are equal to the **converted** rate in **ab_data.csv** regardless of the page. <br><br>
 
 Use a sample size for each page equal to the ones in **ab_data.csv**.  <br><br>
 
