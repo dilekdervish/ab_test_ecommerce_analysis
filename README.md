@@ -6,7 +6,8 @@
 - [Part I - Probability](#probability)
 - [Part II - A/B Test](#ab_test)
 - [Part III - Regression](#regression)
-
+- [Conclusions](#conclusions)
+- [References](#references)
 
 <a id='intro'></a>
 ### Introduction
@@ -1506,9 +1507,15 @@ result3.summary()
 
 None of the variables have significant p-values. Therefore, we fail to reject the null and conclude that there is not sufficient evidence to suggest that there is an interaction between country and page received that will predict whether a user converts or not.
 
+
+<a id='conclusions'></a>
+
 ### Conclusions
 
 In the larger picture, based on the available information, we do not have sufficient evidence to suggest that the new page results in more conversions than the old page. All methods shown in this notebook idicates that we can not reject null hypothesis. Costs of implementing new page could be higher than expected profit from increase of conversion rate. I would not recommend to launch new page on production environment.
+
+
+<a id='references'></a>
 
 ## References
 
